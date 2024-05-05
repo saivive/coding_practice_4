@@ -25,9 +25,7 @@ app.get('/players/', async (request, response) => {
     SELECT  
       * 
     FROM  
-      cricket_team 
-    ORDER BY  
-      player_id`
+      cricket_team;`
   const cricketTeam = await db.all(cricketTeamQuery)
   const responseObject = cricketTeam => {
     return {
